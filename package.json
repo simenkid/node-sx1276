@@ -1,0 +1,24 @@
+{
+  "name": "node-sx1276",
+  "version": "0.0.1",
+  "description": "Node.js driver for sx1276 radio chip",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simenkid/node-sx1276.git"
+  },
+  "keywords": [
+    "LoRa",
+    "sx1276",
+    "sx127x"
+  ],
+  "author": "Simen Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simenkid/node-sx1276/issues"
+  },
+  "homepage": "https://github.com/simenkid/node-sx1276#readme"
+}
