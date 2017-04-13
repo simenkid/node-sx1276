@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/simenkid/node-sx1276/issues"
   },
-  "homepage": "https://github.com/simenkid/node-sx1276#readme"
+  "homepage": "https://github.com/simenkid/node-sx1276#readme",
+  "dependencies": {
+    "busyman": "^0.3.0"
+  }
 }
