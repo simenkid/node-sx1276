@@ -254,13 +254,14 @@ sx.useModem(function (err) {
 ```
 
 *************************************************
-### .readReg(callback) - ok
-TBD  
+### .readReg(regHdl[, callback]) - ok
+Read value of a register by its handle `regHdl`, where `regHdl` can be an identifier (string) or an address (number).  
   
 
 **Arguments:**  
 
-1. `callback` (_Function_): `function (err, granted) {}`, will be called on 
+1. `regHdl` (_String | Number_): Register handle.  
+2. `callback` (_Function_): `function (err, val) {}`, will be called on 
   
 **Returns:**  
 
@@ -269,19 +270,22 @@ TBD
 **Examples:**  
   
 ```js
-sx.readReg(function (err) {
-
+sx.readReg('COM.OpMode', function (err, val) {
+    if (!err)
+        console.log(val);   // 26
 });
 ```
 
 *************************************************
-### .writeReg(callback) - ok
-TBD  
+### .writeReg(regHdl, value[, callback]) - ok
+Write the value to a register by its handle `regHdl`, where `regHdl` can be an identifier (string) or an address (number).  
   
 
 **Arguments:**  
 
-1. `callback` (_Function_): `function (err, granted) {}`, will be called on 
+1. `regHdl` (_String | Number_)): Register handle.  
+2. `value` (_Number_): The value to write to the register.  
+3. `callback` (_Function_): `function (err) {}`, will be called on 
   
 **Returns:**  
 
@@ -290,19 +294,20 @@ TBD
 **Examples:**  
   
 ```js
-sx.writeReg(function (err) {
-
+sx.writeReg('COM.OpMod', 28, function (err) {
+    if (!err)
+        console.log('Written successful.');
 });
 ```
 
 *************************************************
-### .read(callback) - ok
-TBD  
+### .read(regHdl, callback) - ok
+Read value of a register by its handle `regHdl`, where `regHdl` can be an identifier (string) or an address (number). The read value will be an object if the value is coded in multi-fileds. 
   
 
 **Arguments:**  
 
-1. `callback` (_Function_): `function (err, granted) {}`, will be called on 
+1. `callback` (_Function_): `function (err) {}`, will be called on 
   
 **Returns:**  
 
